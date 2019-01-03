@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{61E78223-C015-5C3B-AC4B-41630AC644D0}</ProjectGuid>
+    <ProjectGuid>{61897461-002B-A3EC-F037-AA997469D44D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityWakatime</AssemblyName>

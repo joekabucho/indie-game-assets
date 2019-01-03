@@ -24,7 +24,14 @@ public GameObject playerScoreUI;
 	}
 	void OnTriggerEnter2D(Collider2D trig)
 	{
-		CountScore();
+		if (trig.gameObject.name =="EndLevel"){
+           CountScore();
+		}
+		if (trig.gameObject.name=="coin"){
+            playerScore += 10;
+			Destroy (trig.gameObject);
+		}
+		
 	}
 	void CountScore(){
 		playerScore=playerScore + (int)(timeleft * 10);

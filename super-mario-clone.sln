@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{773E2A4D-DA6F-B24C-6C5E-003EDDA63BCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityWakatime", "UnityWakatime.csproj", "{61897461-002B-A3EC-F037-AA997469D44D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{773E2A4D-DA6F-B24C-6C5E-003EDDA63BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773E2A4D-DA6F-B24C-6C5E-003EDDA63BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773E2A4D-DA6F-B24C-6C5E-003EDDA63BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773E2A4D-DA6F-B24C-6C5E-003EDDA63BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61897461-002B-A3EC-F037-AA997469D44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61897461-002B-A3EC-F037-AA997469D44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61897461-002B-A3EC-F037-AA997469D44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61897461-002B-A3EC-F037-AA997469D44D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

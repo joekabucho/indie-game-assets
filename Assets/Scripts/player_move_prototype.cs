@@ -13,6 +13,7 @@ public class player_move_prototype : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		PlayerMove();
+		playerRaycast();
 	}
 	void PlayerMove()
 	{
@@ -47,8 +48,18 @@ public class player_move_prototype : MonoBehaviour {
 	}
 void OnCollisionEnter2D (Collision2D col)
 	{
-		Debug.Log("player has collided with" + col.collider.name);
-		if (col.gameObject.tag=="ground"){
+		
+	
+	}
+
+	void playerRaycast(){
+		RaycastHit2D hit = Physics2D.Raycast (transform.position,Vector2.down);
+		if (hit.collider!=null && hit != null && hit.distance<0.9f && hit.collider.tag=="enemy" )
+		{
+			GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
+		}
+		if (hit.collider!=null && hit != null && hit.distance<0.9f && hit.collider.tag!="enemy" )
+		{
 			isGround=true;
 		}
 	}
