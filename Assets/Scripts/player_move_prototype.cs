@@ -53,14 +53,30 @@ void OnCollisionEnter2D (Collision2D col)
 	}
 
 	void playerRaycast(){
-		RaycastHit2D hit = Physics2D.Raycast (transform.position,Vector2.down);
-		if (hit.collider!=null && hit != null && hit.distance<0.9f && hit.collider.tag=="enemy" )
+		RaycastHit2D rayUp = Physics2D.Raycast (transform.position,Vector2.up);
+         if ( rayUp  != null && rayUp .collider!=null  && rayUp .distance<0.9f && rayUp .collider.tag=="box_2" ){
+          Destroy(rayUp.collider.gameObject);
+		 }
+
+
+		RaycastHit2D rayDown = Physics2D.Raycast (transform.position,Vector2.down);
+		if ( rayDown  != null && rayDown .collider!=null  && rayDown .distance<0.9f && rayDown .collider.tag=="enemy" )
 		{
 			GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
+		    rayDown .collider.gameObject.GetComponent<Rigidbody>().AddForce(Vector2.right * 200);
+	
+		   rayDown .collider.gameObject.GetComponent<Rigidbody>().freezeRotation=false;
+			rayDown .collider.gameObject.GetComponent<BoxCollider2D>().enabled=false;
+			rayDown .collider.gameObject.GetComponent<EnemyMove>().enabled=false;
+			
 		}
-		if (hit.collider!=null && hit != null && hit.distance<0.9f && hit.collider.tag!="enemy" )
+		if (rayDown .collider!=null && rayDown  != null && rayDown .distance<0.9f && rayDown .collider.tag!="enemy" )
 		{
 			isGround=true;
 		}
+		else
+       {
+            isGround = false;
+        }﻿
 	}
 }
