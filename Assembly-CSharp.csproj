@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\DataManagement.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\Scripts\GoToNewArea.cs" />
      <Compile Include="Assets\Scripts\player_move_prototype.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScore.cs" />

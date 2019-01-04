@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class clouds : MonoBehaviour {
 
+
+public float speed;
+public float xDir;
+
 	// Use this for initialization
 	void Start () {
-		
+		xDir=transform.position.x;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		xDir=Time.deltaTime * speed;
+		transform.position=new Vector3 (xDir,transform.position.y,transform.position.z);
+		if (transform.position.x <-10){
+         transform.position=new Vector3(100,transform.position.y,transform.position.z);
+		}
 	}
 }
