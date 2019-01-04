@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player_move_prototype : MonoBehaviour {
 	 public int playerSpeed = 10;
-	 private bool facingRight = true;
+	 
 	 public int playerJumpPower = 1250;
      private float moveX;
 	// Use this for initialization
@@ -24,12 +24,18 @@ public class player_move_prototype : MonoBehaviour {
 		  Jump();
 	  }
 		//ANIMATION
-		//P
-		if (moveX<0.0f && facingRight ==false){
-			FlipPlayer();
+		if(moveX!=0){
+			GetComponent<Animator>().SetBool("isRunning",true);
 		}
-		else if  (moveX>0.0f && facingRight ==true){
-			FlipPlayer();
+		else{
+			GetComponent<Animator>().SetBool("isRunning",false);
+		}
+		//P
+		if (moveX<0.0f ){
+		GetComponent<SpriteRenderer>().flipX=true;
+		}
+		else if  (moveX>0.0f ){
+		GetComponent<SpriteRenderer>().flipX=false;
 		}
 		//PHYSICS
 		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2 (moveX * playerSpeed,gameObject.GetComponent<Rigidbody2D>().velocity.y);
@@ -40,13 +46,7 @@ public class player_move_prototype : MonoBehaviour {
 		GetComponent<Rigidbody2D>().AddForce (Vector2.up * playerJumpPower);
 		isGround=false;
 	}
-	void FlipPlayer()
-	{
-       facingRight=!facingRight;
-	   Vector2 localScale = gameObject.transform.localScale;
-	   localScale.x*=-1;
-	   transform.localScale=localScale;
-	}
+	
 void OnCollisionEnter2D (Collision2D col)
 	{
 		

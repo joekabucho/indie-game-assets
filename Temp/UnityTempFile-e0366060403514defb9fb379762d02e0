@@ -187,6 +187,7 @@
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/CameraSystem.cs'
+'Assets/Scripts/clouds.cs'
 'Assets/Scripts/DataManagement.cs'
 'Assets/Scripts/EnemyHealth.cs'
 'Assets/Scripts/EnemyMove.cs'
