@@ -26,6 +26,7 @@ public GameObject playerScoreUI;
 	{
 		if (trig.gameObject.name =="EndLevel"){
            CountScore();
+		   DataManagement.datamanagement.SaveData();
 		}
 		if (trig.gameObject.name=="coin"){
             playerScore += 10;
@@ -34,7 +35,10 @@ public GameObject playerScoreUI;
 		
 	}
 	void CountScore(){
+	
 		playerScore=playerScore + (int)(timeleft * 10);
+		DataManagement.datamanagement.highScore=playerScore+(int)(timeleft*10);
+		DataManagement.datamanagement.SaveData();
 		
 	}
 }
