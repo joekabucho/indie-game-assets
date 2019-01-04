@@ -4,6 +4,11 @@
 -langversion:4
 -out:'Temp/Assembly-CSharp.dll'
 -nostdlib
+-r:'Library/ScriptAssemblies/UnityEditor.StandardEvents.dll'
+-r:'Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll'
+-r:'Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll'
+-r:'Library/ScriptAssemblies/UnityWakatime.dll'
+-r:'Library/ScriptAssemblies/Unity.TextMeshPro.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll'
@@ -67,11 +72,6 @@
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/Managed/UnityEditor.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/Managed/Unity.Locator.dll'
--r:'Library/ScriptAssemblies/UnityEditor.StandardEvents.dll'
--r:'Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll'
--r:'Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll'
--r:'Library/ScriptAssemblies/UnityWakatime.dll'
--r:'Library/ScriptAssemblies/Unity.TextMeshPro.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'
 -r:'/home/joe/Unity-2018.2.7f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
@@ -187,6 +187,7 @@
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/CameraSystem.cs'
+'Assets/Scripts/EnemyHealth.cs'
 'Assets/Scripts/EnemyMove.cs'
 'Assets/Scripts/player_move_prototype.cs'
 'Assets/Scripts/PlayerHealth.cs'
