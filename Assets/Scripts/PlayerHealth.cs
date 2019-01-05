@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
-
 	public bool hasDied;
-
-	// Update is called once per frame
+	// Use this for initialization
 	void Update () {
 		if (gameObject.transform.position.y < -7) {
 			Die ();
@@ -16,7 +14,9 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void Die () {
-		SceneManager.LoadScene ("prototype1");
+		SceneManager.LoadScene ("level001");
 
-	}
 }
+
+}
+

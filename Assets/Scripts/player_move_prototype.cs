@@ -64,10 +64,7 @@ void OnCollisionEnter2D (Collision2D col)
 		if ( rayDown  != null && rayDown .collider!=null  && rayDown .distance<distanceToBottomOfPlayer && rayDown .collider.tag=="enemy" )
 		{
 			GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
-		    rayDown .collider.gameObject.GetComponent<Rigidbody>().AddForce(Vector2.right * 200);
-	        rayDown .collider.gameObject.GetComponent<Rigidbody>().freezeRotation=false;
-			rayDown .collider.gameObject.GetComponent<BoxCollider2D>().enabled=false;
-			rayDown .collider.gameObject.GetComponent<EnemyMove>().enabled=false;
+		      Destroy(rayDown.collider.gameObject);
 			
 		}
 		if (rayDown .collider!=null && rayDown  != null && rayDown .distance<distanceToBottomOfPlayer && rayDown .collider.tag!="enemy" )
