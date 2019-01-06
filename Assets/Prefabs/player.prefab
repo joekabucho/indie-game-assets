@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   playerJumpPower: 1250
-  isGround: 0
+  isGround: 1
   distanceToBottomOfPlayer: 4
 --- !u!114 &114810228091451890
 MonoBehaviour:

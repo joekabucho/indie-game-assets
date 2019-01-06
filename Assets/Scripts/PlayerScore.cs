@@ -28,7 +28,7 @@ public GameObject playerScoreUI;
            CountScore();
 		   DataManagement.datamanagement.SaveData();
 		}
-		if (trig.gameObject.name=="coin"){
+		if (trig.gameObject.tag=="coin"){
             playerScore += 10;
 			Destroy (trig.gameObject);
 		}
